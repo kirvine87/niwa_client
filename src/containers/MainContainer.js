@@ -19,9 +19,12 @@ class MainContainer extends Component {
     }
     this.handleDayUpdate = this.handleDayUpdate.bind(this);
   }
-  handleDayUpdate(day, id) {
+  handleDayUpdate(id, day, location) {
   const request = new Request();
   request.patch('/api/days/' + id, day)
+  .then(() => {
+    window.location = location
+  })
 }
 
   componentDidMount(){
