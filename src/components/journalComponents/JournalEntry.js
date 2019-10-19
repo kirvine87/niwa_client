@@ -7,36 +7,33 @@ class JournalEntry extends Component{
       journalEntry: ''
     }
 
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleJournaling = this.handleJournaling.bind(this);
   }
 
-
-
-  handleJournaling(event){
-    console.log('*****', event.target.value);
-    this.setState({journalEntry: event.target.value})
+  handleSubmit(event){
+    event.preventDefault();
+    let newJournalEntry = {
+      journalEntry: this.state.journalEntry
+    }
+    this.props.onSubmit(this.props.today.id, newJournalEntry, "/journal")
   }
 
-  WordCount(str) {
-    return str.split(" ").length;
+  handleJournaling(event){
+    this.setState({journalEntry: event.target.value})
   }
 
   render(){
 
-    let count = 0,
-        length = this.state.value?this.state.value.length:0;
-
     return (
       <div className="row">
-    <form className="col s12">
+    <form className="col s12" >
       <div className="row">
         <div className="input-field col s12">
-          <textarea id="textarea1" className="materialize-textarea" data-length="5" value={this.state.journalEntry}
-          onChange={(event)=>this.handleJournaling(event)}>{this.state.value}</textarea>
-          <div>Count: {length}</div>
-          <div>this.state.value: {this.state.value}</div>
+          <textarea id="textarea1" className="materialize-textarea" value={this.state.journalEntry}
+          onChange={this.handleJournaling}></textarea>
           <label htmlFor="textarea1">Write your words</label>
-          <button>Archive</button>
+          <button onSubmit={this.handleSubmit}>Archive</button>
         </div>
       </div>
     </form>
@@ -44,10 +41,5 @@ class JournalEntry extends Component{
 );
   }
 }
-
-// ReactDOM.render(
-//   <WordCount />,
-//   document.getElementById('root')
-// );
 
 export default JournalEntry;
