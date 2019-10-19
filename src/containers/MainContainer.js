@@ -10,6 +10,7 @@ import JournalContainer from './JournalContainer';
 import MeditationContainer from './MeditationContainer';
 import ReflectionContainer from './ReflectionContainer';
 import ArchiveContainer from './ArchiveContainer';
+import SideNav from '../components/SideNav';
 
 
 class MainContainer extends Component {
@@ -37,16 +38,27 @@ class MainContainer extends Component {
 
       <Router>
       <React.Fragment>
+      <SideNav />
       <AddCalories day={this.state.today}/>
       <AddMood day={this.state.today}/>
       <MoodGraph week={this.state.week}/>
       <WeightGraph week={this.state.week}/>
       <Switch>
-        <Route path="/health" component={HealthContainer} />
-        <Route path="/journal" component={JournalContainer} />
-        <Route path="/meditation" component={MeditationContainer} />
-        <Route path="/reflection" component={ReflectionContainer} />
-        <Route path="/archive" component={ArchiveContainer} />
+        <Route path="/health" render={(props) => {
+            return <HealthContainer today={this.state.today}/>
+          }} />
+        <Route path="/journal" render={(props) => {
+            return <JournalContainer today={this.state.today}/>
+          }} />
+        <Route path="/meditation" render={(props) => {
+            return <MeditationContainer today={this.state.today}/>
+          }} />
+        <Route path="/reflection" render={(props) => {
+            return <ReflectionContainer today={this.state.today}/>
+          }} />
+        <Route path="/archive" render={(props) => {
+            return <ArchiveContainer today={this.state.today}/>
+          }} />
       </Switch>
       </React.Fragment>
       </Router>
