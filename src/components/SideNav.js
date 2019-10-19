@@ -13,7 +13,7 @@ class SideNav extends Component {
   }
 render() {
   return (
-    <Router> <nav>Hello</nav>
+    <Router> <nav>Niwa</nav>
   <ul id="slide-out" className="sidenav">
     <li><div className="user-view">
       <div className="background">
