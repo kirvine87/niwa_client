@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import AddCalories from '../components/mainComponents/AddCalories';
-import AddMood from '../components/mainComponents/AddMood';
-import MoodGraph from '../components/mainComponents/MoodGraph';
-import WeightGraph from '../components/mainComponents/WeightGraph';
 import Request from '../helpers/request';
 import HealthContainer from './HealthContainer';
 import JournalContainer from './JournalContainer';
 import MeditationContainer from './MeditationContainer';
 import ReflectionContainer from './ReflectionContainer';
 import ArchiveContainer from './ArchiveContainer';
+import SideNav from '../components/SideNav';
+import HomeContainer from './HomeContainer';
 
 
 class MainContainer extends Component {
@@ -19,8 +17,12 @@ class MainContainer extends Component {
       week: [],
       today: null
     }
-
+    this.handleDayUpdate = this.handleDayUpdate.bind(this);
   }
+  handleDayUpdate(day, id) {
+  const request = new Request();
+  request.patch('/api/days/' + id, day)
+}
 
   componentDidMount(){
     const request = new Request();
@@ -37,16 +39,26 @@ class MainContainer extends Component {
 
       <Router>
       <React.Fragment>
-      <AddCalories day={this.state.today}/>
-      <AddMood day={this.state.today}/>
-      <MoodGraph week={this.state.week}/>
-      <WeightGraph week={this.state.week}/>
+      <SideNav />
       <Switch>
-        <Route path="/health" component={HealthContainer} />
-        <Route path="/journal" component={JournalContainer} />
-        <Route path="/meditation" component={MeditationContainer} />
-        <Route path="/reflection" component={ReflectionContainer} />
-        <Route path="/archive" component={ArchiveContainer} />
+        <Route exact path="/" render={(props) => {
+            return <HomeContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>
+        }} />
+        <Route path="/health" render={(props) => {
+            return <HealthContainer today={this.state.today}/>
+          }} />
+        <Route path="/journal" render={(props) => {
+            return <JournalContainer today={this.state.today}/>
+          }} />
+        <Route path="/meditation" render={(props) => {
+            return <MeditationContainer today={this.state.today}/>
+          }} />
+        <Route path="/reflection" render={(props) => {
+            return <ReflectionContainer today={this.state.today}/>
+          }} />
+        <Route path="/archive" render={(props) => {
+            return <ArchiveContainer today={this.state.today}/>
+          }} />
       </Switch>
       </React.Fragment>
       </Router>
