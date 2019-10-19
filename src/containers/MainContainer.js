@@ -5,11 +5,11 @@ import AddMood from '../components/mainComponents/AddMood';
 import MoodGraph from '../components/mainComponents/MoodGraph';
 import WeightGraph from '../components/mainComponents/WeightGraph';
 import Request from '../helpers/request';
-import HealthContainer from './HealthContainer'
-import JournalContainer from './JournalContainer'
-import MeditationContainer from './MeditationContainer'
-import ReflectionContainer from './ReflectionContainer'
-import ArchiveContainer from './ArchiveContainer'
+import HealthContainer from './HealthContainer';
+import JournalContainer from './JournalContainer';
+import MeditationContainer from './MeditationContainer';
+import ReflectionContainer from './ReflectionContainer';
+import ArchiveContainer from './ArchiveContainer';
 
 
 class MainContainer extends Component {
@@ -53,5 +53,6 @@ class MainContainer extends Component {
     )
 
   }
+}
 
 export default MainContainer;

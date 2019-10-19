@@ -2,7 +2,7 @@ import React from 'react';
 
 const JournalContainer = (props) => {
   return (
-    <dive> This is the journal container!</div>
+    <div> This is the journal container!</div>
   )
 }
 
