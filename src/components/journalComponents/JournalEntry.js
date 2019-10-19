@@ -25,15 +25,19 @@ class JournalEntry extends Component{
 
   render(){
 
+    if (!this.props.today) {
+      return "Loading..."
+    }
+
     return (
       <div className="row">
-    <form className="col s12" >
+    <form className="col s12" onSubmit={this.handleSubmit}>
       <div className="row">
         <div className="input-field col s12">
           <textarea id="textarea1" className="materialize-textarea" value={this.state.journalEntry}
           onChange={this.handleJournaling}></textarea>
           <label htmlFor="textarea1">Write your words</label>
-          <button onSubmit={this.handleSubmit}>Archive</button>
+          <button>Archive</button>
         </div>
       </div>
     </form>

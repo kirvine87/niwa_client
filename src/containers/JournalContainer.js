@@ -9,7 +9,7 @@ const JournalContainer = (props) => {
   }
 
   return (
-    <JournalEntry />
+    <JournalEntry today={props.today} onSubmit={props.onSubmit}/>
   )
 }
 
