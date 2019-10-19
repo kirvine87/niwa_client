@@ -6,6 +6,12 @@ class JournalEntry extends Component{
     this.state = {
       journalEntry: ''
     }
+
+    this.handleJournaling = this.handleJournaling.bind(this);
+  }
+
+  handleJournaling(event){
+    this.setState({journalEntry: event.target.value})
   }
 
   render(){
@@ -14,8 +20,9 @@ class JournalEntry extends Component{
     <form className="col s12">
       <div className="row">
         <div className="input-field col s12">
-          <textarea id="textarea1" className="materialize-textarea" value={this.state.journalEntry}></textarea>
+          <textarea id="textarea1" className="materialize-textarea" value={this.state.journalEntry} onChange={this.handleJournaling}></textarea>
           <label htmlFor="textarea1">Write your words</label>
+          <button>Archive</button>
         </div>
       </div>
     </form>
