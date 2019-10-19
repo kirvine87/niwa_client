@@ -10,15 +10,18 @@ class MainContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
-      days: []
+      week: [],
+      today: null
     }
 
   }
 
   componentDidMount(){
     const request = new Request();
-    request.get('api/days')
-    .then(data => this.setState({days: data._embedded.days}))
+    const promise1 = request.get('api/days/week')
+    const promise2 = request.get('api/days/latest')
+    Promise.all([promise1, promise2])
+    .then(data => this.setState({week: data[0], today: data[1][0]}))
   }
 
 
@@ -27,7 +30,7 @@ class MainContainer extends Component {
     return(
       <div>
       <p>I am main container</p>
-      <AddCalories />
+      <AddCalories day={this.state.today}/>
       <AddMood />
       <MoodGraph />
       <WeightGraph />

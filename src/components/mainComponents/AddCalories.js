@@ -1,9 +1,15 @@
 import React from 'react';
 
-const AddCalories = () => {
+const AddCalories = (props) => {
+
+  if (!props.day) {
+    return "Loading..."
+  }
 
     return (
-      null
+      <React.Fragment>
+      <h3>Calories: {props.day.calorieIntake}/2000</h3>
+      </React.Fragment>
     )
 }
 
