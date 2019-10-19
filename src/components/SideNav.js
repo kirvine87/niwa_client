@@ -28,6 +28,11 @@ render() {
     <li><div className="divider"></div></li>
     <li><a className="subheader">Subheader</a></li>
     <li><Link className="waves-effect" to="#!">Third Link With Waves</Link></li>
+    <li><Link to="/journal" className="waves-effect">Journal</Link></li>
+    <li><Link to="/meditation" className="waves-effect">Meditation</Link></li>
+    <li><Link to="/reflection" className="waves-effect">Reflection</Link></li>
+    <li><Link to="/health" className="waves-effect">Health</Link></li>
+    <li><Link to="/archive" className="waves-effect">Archive</Link></li>
   </ul>
   <Link to="#" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></Link>
     </Router>
