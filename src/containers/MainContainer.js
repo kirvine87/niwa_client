@@ -48,19 +48,19 @@ class MainContainer extends Component {
             return <HomeContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>
         }} />
         <Route path="/health" render={(props) => {
-            return <HealthContainer today={this.state.today}/>
+            return <HealthContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>
           }} />
         <Route path="/journal" render={(props) => {
-            return <JournalContainer today={this.state.today}/>
+            return <JournalContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>
           }} />
         <Route path="/meditation" render={(props) => {
-            return <MeditationContainer today={this.state.today}/>
+            return <MeditationContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>
           }} />
         <Route path="/reflection" render={(props) => {
-            return <ReflectionContainer today={this.state.today}/>
+            return <ReflectionContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>
           }} />
         <Route path="/archive" render={(props) => {
-            return <ArchiveContainer today={this.state.today}/>
+            return <ArchiveContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>
           }} />
       </Switch>
       </React.Fragment>
