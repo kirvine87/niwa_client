@@ -38,7 +38,7 @@ isToday(checkDate){
 
 handleNewMood(mood, location){
   const request = new Request();
-  request.post('/api/moods/', mood)
+  request.post('/api/moods', mood)
   .then(() => {
     window.location = location
   })
@@ -70,10 +70,10 @@ handleNewMood(mood, location){
       <SideNav />
       <Switch>
         <Route exact path="/" render={(props) => {
-            return <HomeContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>
+            return <HomeContainer onSubmit={this.handleDayUpdate} onMoodSubmit={this.handleNewMood} today={this.state.today}/>
         }} />
         <Route path="/health" render={(props) => {
-            return <HealthContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>
+            return <HealthContainer onSubmit={this.handleDayUpdate} onMoodSubmit={this.handleNewMood} today={this.state.today}/>
           }} />
         <Route path="/journal" render={(props) => {
             return <JournalContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>

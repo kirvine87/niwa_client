@@ -8,7 +8,7 @@ const HomeContainer = (props) => {
   return (
     <React.Fragment>
     <AddCalories onSubmit={props.onSubmit} day={props.today}/>
-    <AddMood day={props.today}/>
+    <AddMood onSubmit={props.onMoodSubmit} day={props.today}/>
     <MoodGraph week={props.week}/>
     <WeightGraph week={props.week}/>
     </React.Fragment>
