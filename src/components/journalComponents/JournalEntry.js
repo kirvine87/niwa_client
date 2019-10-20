@@ -29,6 +29,11 @@ class JournalEntry extends Component{
       return "Loading..."
     }
 
+    let wordCount = 0
+    if(this.state.journalEntry.length != 0){
+      wordCount = this.state.journalEntry.split(" ").length;
+    }
+
     return (
       <div className="row">
     <form className="col s12" onSubmit={this.handleSubmit}>
@@ -37,12 +42,13 @@ class JournalEntry extends Component{
           <textarea id="textarea1" className="materialize-textarea" value={this.state.journalEntry}
           onChange={this.handleJournaling}></textarea>
           <label htmlFor="textarea1">Write your words</label>
+          <div>{wordCount}/500</div>
           <button>Archive</button>
         </div>
       </div>
     </form>
   </div>
-);
+  );
   }
 }
 
