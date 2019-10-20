@@ -1,4 +1,5 @@
 import React from 'react';
+import WaterIntake from '../components/healthComponents/WaterIntake';
 
 const HealthContainer = (props) => {
 
@@ -9,7 +10,7 @@ const HealthContainer = (props) => {
   return (
     <div>
     <p>Hello this is the health container!</p>
-    <p>{props.today.calorieIntake}</p>
+    <WaterIntake onSubmit={props.onSubmit} onMoodSubmit={props.onMoodSubmit} today={props.today}/>
     </div>
   )
 }
