@@ -33,8 +33,9 @@ class JournalEntry extends Component{
       return "Loading..."
     }
 
-
+  
     let length = this.state.journalEntry.split(" ").length;
+
 
     return (
       <div className="row">
@@ -44,7 +45,7 @@ class JournalEntry extends Component{
           <textarea id="textarea1" className="materialize-textarea" value={this.state.journalEntry}
           onChange={this.handleJournaling}></textarea>
           <label htmlFor="textarea1">Write your words</label>
-          <div>{length}</div>
+          <div>{length}/500</div>
           <button>Archive</button>
         </div>
       </div>
