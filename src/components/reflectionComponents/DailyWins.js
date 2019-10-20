@@ -27,8 +27,6 @@ class DailyWins extends Component{
     this.setState({win3: event.target.value})
   }
 
-
-  //udpate onsubmit url
   handleSubmit(event){
     event.preventDefault();
     let dailyWins = {
@@ -44,10 +42,6 @@ class DailyWins extends Component{
     if (!this.props.today) {
       return "Loading..."
     }
-
-
-    // let length = this.state.journalEntry.split(" ").length;
-
 
     return (
       <div className="row">

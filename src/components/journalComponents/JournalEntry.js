@@ -33,9 +33,7 @@ class JournalEntry extends Component{
       return "Loading..."
     }
 
-  
     let length = this.state.journalEntry.split(" ").length;
-
 
     return (
       <div className="row">
@@ -51,7 +49,7 @@ class JournalEntry extends Component{
       </div>
     </form>
   </div>
-);
+  );
   }
 }
 
