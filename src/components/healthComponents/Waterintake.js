@@ -5,7 +5,7 @@ class WaterIntake extends Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleNegativeSubmit = this.handleNegativeSubmit.bind(this);
-  }
+  } 
 
   handleSubmit(event){
     event.preventDefault();
