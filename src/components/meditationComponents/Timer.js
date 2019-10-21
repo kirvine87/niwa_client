@@ -7,7 +7,8 @@ class Timer extends Component {
       time: {},
       seconds: 3,
       meditated: false,
-      stopped: true
+      stopped: true,
+      start: "Start"
     };
 
     this.timer = 0;
@@ -41,19 +42,18 @@ class Timer extends Component {
 
   startTimer() {
     if (this.state.stopped === true){
+      this.setState({start: "Stop"});
     // if (this.timer == 0 && this.state.seconds > 0) {
       this.state.stopped = false;
       this.timer = setInterval(this.countDown, 1000);
     // }
     } else {
       if (this.state.stopped === false){
+        this.setState({start: "Start"});
         this.state.stopped = true;
+        clearInterval(this.timer);
       }
     }
-  }
-
-  stopTimer(){
-
   }
 
   handleSubmit(){
@@ -84,7 +84,7 @@ class Timer extends Component {
   render() {
     return(
       <div>
-        <button onClick={this.startTimer}>Start</button>
+        <button onClick={this.startTimer}>{this.state.start}</button>
         {this.state.time.h} : {this.state.time.m} : {this.state.time.s}
       </div>
     );
