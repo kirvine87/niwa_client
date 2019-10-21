@@ -1,12 +1,14 @@
 import React from 'react';
+import JournalArchive from '../components/archiveComponents/JournalArchive';
 
 const ArchiveContainer = (props) => {
-  if (!props.today) {
+
+  if (!props.week) {
     return "Loading..."
   }
-  
+
   return (
-    <div>This is the archive!</div>
+    <JournalArchive week={props.week}/>
   )
 }
 
