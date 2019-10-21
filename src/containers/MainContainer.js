@@ -70,7 +70,7 @@ handleNewMood(mood, location){
       <SideNav />
       <Switch>
         <Route exact path="/" render={(props) => {
-            return <HomeContainer onSubmit={this.handleDayUpdate} onMoodSubmit={this.handleNewMood} today={this.state.today}/>
+            return <HomeContainer onSubmit={this.handleDayUpdate} onMoodSubmit={this.handleNewMood} today={this.state.today} week={this.state.week} />
         }} />
         <Route path="/health" render={(props) => {
             return <HealthContainer onSubmit={this.handleDayUpdate} onMoodSubmit={this.handleNewMood} today={this.state.today}/>
