@@ -85,7 +85,7 @@ class Timer extends Component {
     return(
       <div>
         <button onClick={this.startTimer}>{this.state.start}</button>
-        {this.state.time.h} : {this.state.time.m} : {this.state.time.s}
+        {this.state.time.m} : {this.state.time.s}
       </div>
     );
   }
