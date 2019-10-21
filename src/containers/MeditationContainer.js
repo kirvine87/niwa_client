@@ -7,7 +7,7 @@ const MeditationContainer = (props) => {
   }
 
   return(
-    <Timer />
+    <Timer today={props.today} onSubmit={props.onSubmit}/>
   )
 }
 

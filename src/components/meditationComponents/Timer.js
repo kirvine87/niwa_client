@@ -7,15 +7,17 @@ class Timer extends Component {
     super();
     this.state = {
       time: {},
-      seconds: 2,
+      seconds: 1800,
       meditated: false
     };
 
     this.timer = 0;
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.startTimer = this.startTimer.bind(this);
     this.countDown = this.countDown.bind(this);
   }
 
+  //Turns seconds into minutes and hours  and creates time type objects
   secondsToTime(secs){
     let hours = Math.floor(secs / (60 * 60));
 
@@ -25,12 +27,12 @@ class Timer extends Component {
     let divisor_for_seconds = divisor_for_minutes % 60;
     let seconds = Math.ceil(divisor_for_seconds);
 
-    let obj = {
+    let types = {
       "h": hours,
       "m": minutes,
       "s": seconds
     };
-    return obj;
+    return types;
   }
 
   componentDidMount() {
@@ -44,6 +46,13 @@ class Timer extends Component {
     }
   }
 
+  handleSubmit(){
+    let hasMeditated = {
+      meditated: this.state.meditated
+    }
+    this.props.onSubmit(this.props.today.id, hasMeditated, "/meditation")
+  }
+
   countDown() {
     // Remove one second, set state so a re-render happens.
     let seconds = this.state.seconds - 1;
@@ -52,14 +61,11 @@ class Timer extends Component {
       seconds: seconds,
     });
 
-    // Check if we're at zero.
+    // Check if if timer has reached 0.
     if (seconds == 0) {
       clearInterval(this.timer);
       this.state.meditated = true;
-      let meditationComplete = {
-        meditated: this.state.meditated
-      }
-      this.props.clearInterval(this.props.today.id, meditationComplete, "/meditation")
+      this.handleSubmit();
     }
   }
 
