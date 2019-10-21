@@ -12,7 +12,12 @@ class AddCalories extends Component {
   }
 
   handleCalorieIntake(event){
-    this.setState({calorieIntake: event.target.value})
+    const total = parseInt(this.props.day.calorieIntake) + parseInt(event.target.value)
+    const setZero = -parseInt(this.props.day.calorieIntake)
+    if (total > 0) {
+      return this.setState({calorieIntake: event.target.value})
+    }
+    this.setState({calorieIntake: setZero})
   }
 
   handleSubmit(event){
