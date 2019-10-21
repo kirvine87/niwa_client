@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import Countdown from 'react-countdown-now';
 
 class Timer extends Component {
   constructor() {
     super();
     this.state = {
       time: {},
-      seconds: 1800,
-      meditated: false
+      seconds: 3,
+      meditated: false,
+      stopped: true
     };
 
     this.timer = 0;
@@ -41,9 +40,20 @@ class Timer extends Component {
   }
 
   startTimer() {
-    if (this.timer == 0 && this.state.seconds > 0) {
+    if (this.state.stopped === true){
+    // if (this.timer == 0 && this.state.seconds > 0) {
+      this.state.stopped = false;
       this.timer = setInterval(this.countDown, 1000);
+    // }
+    } else {
+      if (this.state.stopped === false){
+        this.state.stopped = true;
+      }
     }
+  }
+
+  stopTimer(){
+
   }
 
   handleSubmit(){
@@ -55,6 +65,7 @@ class Timer extends Component {
 
   countDown() {
     // Remove one second, set state so a re-render happens.
+    if (this.state.stopped === false){
     let seconds = this.state.seconds - 1;
     this.setState({
       time: this.secondsToTime(seconds),
@@ -62,12 +73,13 @@ class Timer extends Component {
     });
 
     // Check if if timer has reached 0.
-    if (seconds == 0) {
+    if (seconds === 0) {
       clearInterval(this.timer);
       this.state.meditated = true;
       this.handleSubmit();
     }
   }
+}
 
   render() {
     return(
