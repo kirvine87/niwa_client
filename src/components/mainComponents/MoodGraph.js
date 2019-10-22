@@ -54,17 +54,19 @@ class MoodGraph extends Component {
     if (!this.props){
       return "Loading..."
     }
-    return (
 
+    return (
+      <div class="hoverable">
       <ResponsiveContainer height={150} width="99%">
       <LineChart width={600} height={300} data={this.weeklyMoods()} margin={{ top: 0, right: 0, bottom: 0, left: -40 }}>
-      <Line type="monotone" dataKey="rating" stroke="#8884d8" />
-      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+      <Line type="monotone" dataKey="rating" stroke="#c62828" />
+      <CartesianGrid stroke="#a5d6a7" strokeDasharray="5 5" />
       <XAxis dataKey="name" />
-      <YAxis />
+      <YAxis ticks={[1,2,3,4,5]} interval={0} domain={[0, 6]} />
       <Tooltip />
       </LineChart>
       </ResponsiveContainer>
+      </div>
     )
   }
 }

@@ -54,7 +54,7 @@ class Activities extends Component{
       <span> meditated? </span>
       </label>
       </div>
-      <button type="submit" className="btn-small mt-2 green" name="save">Save</button>
+      <button type="submit" className="btn-small mt-2 green lighten-2" name="save">Save</button>
       </form>
       </div>
     )
