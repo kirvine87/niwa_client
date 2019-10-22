@@ -36,13 +36,13 @@ class WaterIntake extends Component {
     return (
       <div>
       <p>WaterIntake: {this.props.today.waterIntake} Cups(330ml)</p>
-      
+
       <form onSubmit={this.handleSubmit} >
-        <button type="submit" className="btn btn-primary mt-2" name="waterIntake">Add Cup</button>
+        <button type="submit" class="btn-floating btn-small light green" name="waterIntake">+</button>
       </form>
 
       <form onSubmit={this.handleNegativeSubmit} >
-        <button type="submit" className="btn btn-primary mt-2" name="waterIntake">Remove Cup</button>
+        <button type="submit" class="btn-floating btn-small waves-effect waves-light green" name="waterIntake">-</button>
       </form>
       </div>
     )
