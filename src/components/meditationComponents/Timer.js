@@ -83,10 +83,9 @@ class Timer extends Component {
 
   render() {
     return(
-      <div>
-        <button onClick={this.startTimer}>{this.state.start}</button>
-        {this.state.time.m} : {this.state.time.s}
-        <span className="circle"></span>
+      <div className="circle">
+        <button onClick={this.startTimer} id="circle" className="btn-floating pulse btn-large"><i className="material-icons"></i>
+        {this.state.time.m} : {this.state.time.s} <br /> {this.state.start}</button>
       </div>
     );
   }
