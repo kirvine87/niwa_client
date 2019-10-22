@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Request from '../../helpers/request';
 
 class AddCalories extends Component {
   constructor(props){
