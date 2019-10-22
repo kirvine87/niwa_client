@@ -85,7 +85,7 @@ handleNewMood(mood, location){
             return <ReflectionContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>
           }} />
         <Route path="/archive" render={(props) => {
-            return <ArchiveContainer onSubmit={this.handleDayUpdate} today={this.state.today}/>
+            return <ArchiveContainer onSubmit={this.handleDayUpdate} today={this.state.today} week={this.state.week}/>
           }} />
       </Switch>
       </React.Fragment>
