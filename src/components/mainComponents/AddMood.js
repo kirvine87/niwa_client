@@ -77,12 +77,12 @@ class AddMood extends Component {
 
         <div className="form-check">
             <label>
-              <input type="text" name="tag" onChange={this.handleTag} className="form-check-input" />
+              <input type="text" placeholder="Tag your mood" name="tag" onChange={this.handleTag} className="form-check-input" />
             </label>
           </div>
 
         <div className="form-group">
-          <button className="btn-small mt-2 green" type="submit" >
+          <button className="btn-small mt-2 green lighten-2" type="submit" >
             Save
           </button>
         </div>

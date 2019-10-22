@@ -14,7 +14,7 @@ class SideNav extends Component {
 
 render() {
   return (
-    <Router> <nav><a href="/">Niwa</a></nav>
+    <Router> <nav className="green lighten-2"><a href="/">Niwa</a></nav>
   <ul id="slide-out" className="sidenav">
     <li><div className="user-view">
       <div className="background">
