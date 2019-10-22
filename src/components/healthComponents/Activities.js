@@ -22,11 +22,15 @@ class Activities extends Component{
   }
 
   handleExercised(event){
-    this.setState({exercised: event.target.value})
+    this.setState({exercised: this.stringToBool(event.target.value)})
   }
 
   handleMeditated(event){
-    this.setState({meditated: event.target.value})
+    this.setState({meditated: this.stringToBool(event.target.value)})
+  }
+
+  stringToBool(val) {
+    return (val + '').toLowerCase() === 'true';
   }
 
   render(){
@@ -40,17 +44,17 @@ class Activities extends Component{
       <form onSubmit={this.handleSubmit} >
       <div>
       <label>
-        <input type="checkbox" name="exercised" value={!this.state.exercised} onChange={this.handleExercised} />
-        <span> exercised? </span>
+      <input type="checkbox" name="exercised" value={!this.state.exercised} checked={this.state.exercised} onChange={this.handleExercised} />
+      <span> exercised? </span>
       </label>
       </div>
       <div>
       <label>
-        <input type="checkbox" name="meditated" value={!this.state.meditated} onChange={this.handleMeditated} />
-        <span> meditated? </span>
+      <input type="checkbox" name="meditated" value={!this.state.meditated} checked={this.state.meditated} onChange={this.handleMeditated} />
+      <span> meditated? </span>
       </label>
       </div>
-        <button type="submit" className="btn btn-primary mt-2" name="save">Save</button>
+      <button type="submit" className="btn btn-primary mt-2" name="save">Save</button>
       </form>
       </div>
     )

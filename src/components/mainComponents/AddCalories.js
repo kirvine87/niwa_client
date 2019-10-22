@@ -41,7 +41,7 @@ class AddCalories extends Component {
       <div>
       <form onSubmit={this.handleSubmit}>
       <input type="number" placeholder="Calorie Intake" name="calorieIntake" onChange={this.handleCalorieIntake}  />
-      <button type="submit">Save</button>
+      <button type="submit" className="btn btn-primary mt-2">Save</button>
       </form>
       </div>
       </React.Fragment>
