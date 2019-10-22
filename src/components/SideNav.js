@@ -18,7 +18,7 @@ render() {
   <ul id="slide-out" className="sidenav">
     <li><div className="user-view">
       <div className="background">
-        <img src="images/6804073-nice-backgrounds.jpg" alt="background" />
+        <img className="blind-tree" src="/assets/blindtree.png" alt="background" />
       </div>
       <p><img className="circle" src="images/kyle.jpeg" alt="kyle" /></p>
       <p><span className="white-text name">Kyle</span></p>
@@ -30,6 +30,7 @@ render() {
     <li><a href="/reflection" className="waves-effect">Reflection</a></li>
     <li><a href="/health" className="waves-effect">Health</a></li>
     <li><a href="/archive" className="waves-effect">Archive</a></li>
+    <img className="niwa-bottom" src="/assets/niwa.png" alt="background" />
   </ul>
   <Link to="" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></Link>
     </Router>
