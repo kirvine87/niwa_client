@@ -2,8 +2,7 @@ import React from 'react';
 import AddCalories from '../components/mainComponents/AddCalories';
 import AddMood from '../components/mainComponents/AddMood';
 import MoodGraph from '../components/mainComponents/MoodGraph';
-import WeightGraph from '../components/mainComponents/WeightGraph';
-import M from 'materialize-css';
+import CalorieGraph from '../components/mainComponents/CalorieGraph';
 
 const HomeContainer = (props) => {
 
@@ -19,7 +18,7 @@ const HomeContainer = (props) => {
     <AddMood onSubmit={props.onMoodSubmit} day={props.today}/>
     <br /> <br /> <br />
     <MoodGraph week={props.week}/>
-    <WeightGraph week={props.week}/>
+    <CalorieGraph week={props.week}/>
     </React.Fragment>
 
   )

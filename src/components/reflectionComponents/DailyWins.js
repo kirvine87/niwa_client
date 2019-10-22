@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import 'materialize-css/dist/css/materialize.min.css';
 
 class DailyWins extends Component{
   constructor(props){
@@ -65,7 +66,7 @@ class DailyWins extends Component{
           <label htmlFor="textarea4">Write your words</label>
         </div>
       </div>
-      <button>Archive</button>
+      <button className="waves-effect waves-light btn-small green lighten-2"><i className="material-icons right">archive</i>Archive</button>
     </form>
     </div>
   );

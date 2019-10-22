@@ -1,5 +1,5 @@
-import React, {Component, Fragment} from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
 
@@ -14,7 +14,8 @@ class SideNav extends Component {
 
 render() {
   return (
-    <Router> <nav className="green lighten-2"><a href="/">Niwa</a></nav>
+    <Router> <nav className="green lighten-2"><a href="/">Niwa</a> <Link to="" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></Link></nav>
+    <br />
   <ul id="slide-out" className="sidenav">
     <li><div className="user-view">
       <div className="background">
@@ -32,7 +33,7 @@ render() {
     <li><a href="/archive" className="waves-effect">Archive</a></li>
     <img className="niwa-bottom" src="/assets/niwa.png" alt="background" />
   </ul>
-  <Link to="" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></Link>
+
     </Router>
   );
 }
