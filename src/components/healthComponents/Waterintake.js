@@ -5,7 +5,7 @@ class WaterIntake extends Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleNegativeSubmit = this.handleNegativeSubmit.bind(this);
-  } 
+  }
 
   handleSubmit(event){
     event.preventDefault();
@@ -36,13 +36,13 @@ class WaterIntake extends Component {
     return (
       <div>
       <p>WaterIntake: {this.props.today.waterIntake} Cups(330ml)</p>
-
+      
       <form onSubmit={this.handleSubmit} >
-        <button type="submit" name="waterIntake">Add Cup</button>
+        <button type="submit" className="btn btn-primary mt-2" name="waterIntake">Add Cup</button>
       </form>
 
       <form onSubmit={this.handleNegativeSubmit} >
-        <button type="submit" name="waterIntake">Remove Cup</button>
+        <button type="submit" className="btn btn-primary mt-2" name="waterIntake">Remove Cup</button>
       </form>
       </div>
     )

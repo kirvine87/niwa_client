@@ -5,7 +5,7 @@ class Timer extends Component {
     super();
     this.state = {
       time: {},
-      seconds: 3,
+      seconds: 1800,
       meditated: false,
       stopped: true,
       start: "Start"
