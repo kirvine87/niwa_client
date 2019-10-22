@@ -26,7 +26,7 @@ class AddCalories extends Component {
     let newIntake = {
       calorieIntake: updateIntake
     }
-    this.props.onSubmit(this.props.day.id, newIntake, "/")
+    this.props.onSubmit(this.props.day.id, newIntake, "/home")
   }
 
   render(){
