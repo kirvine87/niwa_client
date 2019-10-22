@@ -69,7 +69,7 @@ handleNewMood(mood, location){
       <React.Fragment>
       <SideNav />
       <Switch>
-        <Route exact path="/" render={(props) => {
+        <Route exact path="/home" render={(props) => {
             return <HomeContainer onSubmit={this.handleDayUpdate} onMoodSubmit={this.handleNewMood} today={this.state.today} week={this.state.week} />
         }} />
         <Route path="/health" render={(props) => {
