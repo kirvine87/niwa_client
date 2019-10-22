@@ -1,0 +1,24 @@
+html, body {
+  height: 100%
+}
+
+
+body {
+  background-image: url("/assets/tree_transparent.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.blind-tree {
+  height: 100%;
+  filter: blur(5px);
+}
+
+.niwa-bottom {
+  position: fixed;
+  width: 95%;
+  left: 8px;
+  bottom: 60px;
+}
