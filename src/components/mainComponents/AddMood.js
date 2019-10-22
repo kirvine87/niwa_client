@@ -82,7 +82,7 @@ class AddMood extends Component {
           </div>
 
         <div className="form-group">
-          <button className="btn btn-primary mt-2" type="submit" >
+          <button className="btn-small mt-2 green" type="submit" >
             Save
           </button>
         </div>
