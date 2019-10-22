@@ -23,6 +23,14 @@ class JournalEntry extends Component{
     this.setState({journalEntry: event.target.value})
   }
 
+  label(){
+    if (this.props.today.journalEntry){
+      return <label htmlFor="textarea1"></label>
+    } else {
+      return <label htmlFor="textarea1">Write your words</label>
+    }
+  }
+
   render(){
 
     if (!this.props.today) {
@@ -36,12 +44,13 @@ class JournalEntry extends Component{
 
     return (
       <div className="row">
+      <h5>Journal Entry:</h5>
     <form className="col s12" onSubmit={this.handleSubmit}>
       <div className="row">
         <div className="input-field col s12" >
-          <textarea id="textarea1" className="materialize-textarea" value={this.state.journalEntry}
+          <textarea id="textarea1" className="materialize-textarea" value={this.props.today.journalEntry}
           onChange={this.handleJournaling}></textarea>
-          <label htmlFor="textarea1">Write your words</label>
+          <label htmlFor="textarea1"></label>
           <div>{wordCount}/500</div>
           <button className="waves-effect waves-light btn-small green lighten-2"><i className="material-icons right">archive</i>Archive</button>
         </div>
