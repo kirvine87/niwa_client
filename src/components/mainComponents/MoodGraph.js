@@ -56,7 +56,7 @@ class MoodGraph extends Component {
     }
 
     return (
-      <div class="hoverable">
+      <div className="hoverable">
       <ResponsiveContainer height={150} width="99%">
       <LineChart width={600} height={300} data={this.weeklyMoods()} margin={{ top: 0, right: 0, bottom: 0, left: -40 }}>
       <Line type="monotone" dataKey="rating" stroke="#c62828" />
