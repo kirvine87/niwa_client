@@ -86,6 +86,7 @@ class Timer extends Component {
       <div>
         <button onClick={this.startTimer}>{this.state.start}</button>
         {this.state.time.m} : {this.state.time.s}
+        <span className="circle"></span>
       </div>
     );
   }
