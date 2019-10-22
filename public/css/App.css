@@ -1,0 +1,12 @@
+html, body {
+  height: 100%
+}
+
+
+body {
+  background-image: url("/assets/tree_transparent.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+}
