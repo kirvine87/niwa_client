@@ -4,9 +4,8 @@ class JournalEntry extends Component{
   constructor(props){
     super(props);
     this.state = {
-      journalEntry: ''
+      journalEntry: this.props.today.journalEntry
     }
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleJournaling = this.handleJournaling.bind(this);
   }
