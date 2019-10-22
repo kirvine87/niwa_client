@@ -21,7 +21,7 @@ render() {
       <div className="background">
         <img className="blind-tree" src="/assets/blindtree.png" alt="background" />
       </div>
-      <p><img className="circle" src="images/kyle.jpeg" alt="kyle" /></p>
+      <p><img id="profile" className="circle" src="images/kyle.jpeg" alt="kyle" /></p>
       <p><span className="white-text name">Kyle</span></p>
       <p><span className="white-text email">kyle@gmail.com</span></p>
     </div></li>
