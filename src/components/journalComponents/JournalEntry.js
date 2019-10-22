@@ -43,7 +43,7 @@ class JournalEntry extends Component{
           onChange={this.handleJournaling}></textarea>
           <label htmlFor="textarea1">Write your words</label>
           <div>{wordCount}/500</div>
-          <button>Archive</button>
+          <button className="waves-effect waves-light btn-small green lighten-2"><i className="material-icons right">archive</i>Archive</button>
         </div>
       </div>
     </form>
