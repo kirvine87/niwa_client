@@ -1,11 +1,11 @@
 ## Welcome to Niwa!
 
 <img src="app_images/niwa_01.jpg" width=300 align=right>
-
+<br />
 <img src="app_images/niwa_02.jpg" width=300 align=right>
-
+<br />
 <img src="app_images/niwa_03.jpg" width=300 align=right>
-
+<br />
 <img src="app_images/niwa_04.jpg" width=300 align=right>
 
 
