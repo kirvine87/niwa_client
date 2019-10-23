@@ -1,5 +1,14 @@
 ## Welcome to Niwa!
 
+<img src="app_images/niwa_01.jpg" width=300 align=right>
+
+<img src="app_images/niwa_02.jpg" width=300 align=right>
+
+<img src="app_images/niwa_03.jpg" width=300 align=right>
+
+<img src="app_images/niwa_04.jpg" width=300 align=right>
+
+
 Hello! We built a wellbeing app for our final project. We put this together in six days, after learning React for three days. It uses the following packages:
 
 - Materialize CSS
@@ -20,10 +29,6 @@ For our final project we were given the following spec:
 - It must contain some custom logic - this could be filtering, sorting etc.
 
 Niwa covers all of these bases and more.
-
-### Screenshots
-
-<img src="app_images/niwa_01.jpg" width=300 align=right>
 
 ### Our MVP Spec
 "A wellbeing app that allows you to journal in the morning, reflect on your day in the evening with both short questions and a series of check boxes. It also allows you to keep track of your mood throughout the day. You can add a mood any time and tag it with details.
