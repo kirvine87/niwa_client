@@ -22,18 +22,18 @@ render() {
         <img className="blind-tree" src="/assets/blindtree.png" alt="background" />
       </div>
       <p><img id="profile" className="circle" src="images/kyle.jpeg" alt="kyle" /></p>
-      <p><span className="white-text name">Kyle</span></p>
-      <p><span className="white-text email">kyle@gmail.com</span></p>
+      <p><span className="green-text text-darken-4 name"><h5>Kyle</h5></span></p>
+      <p><span className="green-text text-darken-4 email"><h6>kyle@gmail.com</h6></span></p>
     </div></li>
     <li><div className="divider"></div></li>
-    <li><a href="/journal" className="waves-effect">Journal</a></li>
-    <li><a href="/meditation" className="waves-effect">Meditation</a></li>
-    <li><a href="/reflection" className="waves-effect">Reflection</a></li>
-    <li><a href="/health" className="waves-effect">Health</a></li>
-    <li><a href="/archive" className="waves-effect">Archive</a></li>
+    <li><a href="/journal" className="waves-effect waves-green">Journal</a></li>
+    <li><a href="/meditation" className="waves-effect waves-green">Meditation</a></li>
+    <li><a href="/reflection" className="waves-effect waves-green">Reflection</a></li>
+    <li><a href="/health" className="waves-effect waves-green">Health</a></li>
+    <li><a href="/archive" className="waves-effect waves-green">Archive</a></li>
     <img className="niwa-bottom" src="/assets/niwa.png" alt="background" />
   </ul>
-  
+
 
     </Router>
   );
