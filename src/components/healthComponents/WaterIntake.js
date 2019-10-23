@@ -36,6 +36,7 @@ class WaterIntake extends Component {
     return (
       <div>
       <p><strong>Total water for today</strong>: {this.props.today.waterIntake} Cups(330ml)</p>
+      <p>Add your water intake:</p>
 
       <form onSubmit={this.handleSubmit} >
         <button type="submit" className="btn-floating btn-small light green lighten-2" name="waterIntake">+</button>

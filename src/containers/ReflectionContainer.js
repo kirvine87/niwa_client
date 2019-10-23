@@ -7,7 +7,11 @@ const ReflectionContainer = (props) => {
   }
 
   return(
-    <DailyWins today={props.today} onSubmit={props.onSubmit}/>
+    <div>
+    <h4>Your Daily Wins</h4>
+    <div className="container"><p>Reflect on three achievements you made today, and write about them here.</p>  </div>
+    <DailyWins today={props.today} onSubmit={props.onSubmit}/></div>
+
   )
 }
 
