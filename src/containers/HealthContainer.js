@@ -17,11 +17,11 @@ const HealthContainer = (props) => {
 
   if (props.today.meditated) {
     M.toast({html: 'Well done on meditating!'})
-  } 
+  }
 
   return (
     <div>
-    <h4>Health</h4>
+    <h3>Health</h3>
     <WaterIntake onSubmit={props.onSubmit} onMoodSubmit={props.onMoodSubmit} today={props.today}/>
     <AddCalorie onSubmit={props.onSubmit} day={props.today}/>
     <AddMood onSubmit={props.onMoodSubmit} day={props.today}/>
