@@ -5,29 +5,6 @@ class MoodGraph extends Component {
   constructor(props){
     super(props);
     this.state = {
-      data: [
-        {
-          name: 'day 1', rating: 3
-        },
-        {
-          name: 'day 2', rating: 2
-        },
-        {
-          name: 'day 3', rating: 4
-        },
-        {
-          name: 'day 4', rating: 5
-        },
-        {
-          name: 'day 5', rating: 5
-        },
-        {
-          name: 'day 6', rating: 1
-        },
-        {
-          name: 'day 7', rating: 4
-        },
-      ],
       moods: []
     }
     this.weeklyMoods = this.weeklyMoods.bind(this);
