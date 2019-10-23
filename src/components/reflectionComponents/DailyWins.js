@@ -51,19 +51,19 @@ class DailyWins extends Component{
         <div className="input-field col s12">
           <textarea id="textarea2" className="materialize-textarea" value={this.state.win1}
           onChange={this.handleWin1}></textarea>
-          <label htmlFor="textarea2">Write your words</label>
+          <label htmlFor="textarea2">What is your first win? Why is this a win?</label>
         </div>
 
         <div className="input-field col s12">
           <textarea id="textarea2" className="materialize-textarea" value={this.state.win2}
           onChange={this.handleWin2}></textarea>
-          <label htmlFor="textarea2">Write your words</label>
+          <label htmlFor="textarea2">What is your second win? Why is this a win?</label>
         </div>
 
         <div className="input-field col s12">
           <textarea id="textarea2" className="materialize-textarea" value={this.state.win3}
           onChange={this.handleWin3}></textarea>
-          <label htmlFor="textarea2">Write your words</label>
+          <label htmlFor="textarea2">What is your third win? Why is this a win?</label>
         </div>
       </div>
       <button className="waves-effect waves-light btn-small green lighten-2"><i className="material-icons right">archive</i>Archive</button>
