@@ -26,7 +26,7 @@ render() {
       <h6><span id="profile-email" className="green-text text-darken-4 email">kyle@gmail.com</span></h6>
     </div></li>
     <li><div className="divider"></div></li>
-    <li><a href="/" className="waves-effect waves-green">Home</a></li>
+    <li><a href="/home" className="waves-effect waves-green">Home</a></li>
     <li><a href="/journal" className="waves-effect waves-green">Journal</a></li>
     <li><a href="/meditation" className="waves-effect waves-green">Meditation</a></li>
     <li><a href="/reflection" className="waves-effect waves-green">Reflection</a></li>

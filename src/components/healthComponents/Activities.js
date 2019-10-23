@@ -39,7 +39,7 @@ class Activities extends Component{
     }
 
     return (
-      <div>
+      <div className="container">
       <p> Have you... </p>
       <form onSubmit={this.handleSubmit} >
       <div>
