@@ -22,7 +22,8 @@ For our final project we were given the following spec:
 Niwa covers all of these bases and more.
 
 ### Screenshots
-![screenshot 1](app_images/niwa_01.jpg | width=100) ![screenshot 1](app_images/niwa_02.jpg) ![screenshot 1](app_images/niwa_03.jpg) ![screenshot 1](app_images/niwa_04.jpg)
+
+<img src="app_images/niwa_01.jpg" width=300 align=right>
 
 ### Our MVP Spec
 "A wellbeing app that allows you to journal in the morning, reflect on your day in the evening with both short questions and a series of check boxes. It also allows you to keep track of your mood throughout the day. You can add a mood any time and tag it with details.
