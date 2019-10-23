@@ -1,13 +1,4 @@
-## Welcome to Niwa!
-
-<img src="app_images/niwa_01.jpg" width=300 align=right>
-<br />
-<img src="app_images/niwa_02.jpg" width=300 align=right>
-<br />
-<img src="app_images/niwa_03.jpg" width=300 align=right>
-<br />
-<img src="app_images/niwa_04.jpg" width=300 align=right>
-
+# Welcome to Niwa!
 
 Hello! We built a wellbeing app for our final project. We put this together in six days, after learning React for three days. It uses the following packages:
 
@@ -30,7 +21,11 @@ For our final project we were given the following spec:
 
 Niwa covers all of these bases and more.
 
-### Our MVP Spec
+
+### Screenshots
+<img src="app_images/niwa_01.jpg" width=300> <img src="app_images/niwa_02.jpg" width=300> <img src="app_images/niwa_03.jpg" width=300> <img src="app_images/niwa_04.jpg" width=300>
+
+## Our MVP Spec
 "A wellbeing app that allows you to journal in the morning, reflect on your day in the evening with both short questions and a series of check boxes. It also allows you to keep track of your mood throughout the day. You can add a mood any time and tag it with details.
 
 You can keep track of other wellbeing details, such as your calorie count and weight.
@@ -71,7 +66,7 @@ We'd also like to implement more of our advanced ideas, such as a fully featured
 
 Thank you for checking out our work!
 
-### Notes
+## Notes
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
