@@ -14,10 +14,11 @@ const HomeContainer = (props) => {
     <React.Fragment>
     <AddCalories onSubmit={props.onSubmit} day={props.today}/>
     <br />
-    <br />
     <AddMood onSubmit={props.onMoodSubmit} day={props.today}/>
     <br /> <br /> <br />
+    <div className="container"><h6>Your Moods This Week</h6></div>
     <MoodGraph week={props.week}/>
+    <div className="container"><h6>Your Calories This Week</h6></div>
     <CalorieGraph week={props.week}/>
     </React.Fragment>
 
