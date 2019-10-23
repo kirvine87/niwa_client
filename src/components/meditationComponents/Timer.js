@@ -40,21 +40,23 @@ class Timer extends Component {
     this.setState({ time: timeLeftVar });
   }
 
+  //start the timer + change start to stop and no pulse to pulse
   startTimer() {
     if (this.state.stopped === true){
       this.setState({start: "Stop"});
-    // if (this.timer == 0 && this.state.seconds > 0) {
+      document.getElementById("circle").className += " pulse";
       this.state.stopped = false;
       this.timer = setInterval(this.countDown, 1000);
-    // }
     } else {
       if (this.state.stopped === false){
+        document.getElementById("circle").className = "btn-floating btn-large #81c784 green lighten-2";
         this.setState({start: "Start"});
         this.state.stopped = true;
         clearInterval(this.timer);
       }
     }
   }
+
 
   handleSubmit(){
     let hasMeditated = {
@@ -72,7 +74,7 @@ class Timer extends Component {
       seconds: seconds,
     });
 
-    // Check if if timer has reached 0.
+    // Check if timer has reached 0, if true then submit meditate to database.
     if (seconds === 0) {
       clearInterval(this.timer);
       this.state.meditated = true;
@@ -84,7 +86,8 @@ class Timer extends Component {
   render() {
     return(
       <div className="circle">
-        <button onClick={this.startTimer} id="circle" className="btn-floating pulse btn-large"><i className="material-icons"></i>
+        <button onClick={this.startTimer} id="circle" className="btn-floating btn-large #81c784 green lighten-2">
+        <i className="material-icons"></i>
         {this.state.time.m} : {this.state.time.s} <br /> {this.state.start}</button>
       </div>
     );
