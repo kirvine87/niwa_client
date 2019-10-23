@@ -55,15 +55,15 @@ class DailyWins extends Component{
         </div>
 
         <div className="input-field col s12">
-          <textarea id="textarea3" className="materialize-textarea" value={this.state.win2}
+          <textarea id="textarea2" className="materialize-textarea" value={this.state.win2}
           onChange={this.handleWin2}></textarea>
-          <label htmlFor="textarea3">Write your words</label>
+          <label htmlFor="textarea2">Write your words</label>
         </div>
 
         <div className="input-field col s12">
-          <textarea id="textarea4" className="materialize-textarea" value={this.state.win3}
+          <textarea id="textarea2" className="materialize-textarea" value={this.state.win3}
           onChange={this.handleWin3}></textarea>
-          <label htmlFor="textarea4">Write your words</label>
+          <label htmlFor="textarea2">Write your words</label>
         </div>
       </div>
       <button className="waves-effect waves-light btn-small green lighten-2"><i className="material-icons right">archive</i>Archive</button>

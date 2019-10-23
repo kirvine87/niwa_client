@@ -13,7 +13,7 @@ class SideNav extends Component {
 
 render() {
   return (
-    <Router> <nav id="nav" className="green lighten-2 niwa-header"><a href="/home">Niwa</a> <Link to="" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></Link></nav>
+    <Router> <nav id="nav" className="green lighten-2 niwa-header"><a href="/home">niwa</a> <Link to="" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></Link></nav>
     <br />
 
   <ul id="slide-out" className="sidenav">
@@ -33,7 +33,7 @@ render() {
     <li><a href="/archive" className="waves-effect">Archive</a></li>
     <img className="niwa-bottom" src="/assets/niwa.png" alt="background" />
   </ul>
-  
+
 
     </Router>
   );
