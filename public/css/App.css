@@ -35,6 +35,12 @@ body {
   margin: 25%;
 }
 
+.niwa-header {
+ font-size: 40px;
+ font-family: 'gill sans';
+ font-weight: lighter;
+}
+
 /* #profile {
   height: 150px;
   width: 150px;
