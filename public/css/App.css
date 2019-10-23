@@ -48,3 +48,12 @@ body {
 #textarea2 {
   height: 8em;
 }
+
+#profile-name {
+  font-family: 'futura';
+  font-weight: bold;
+}
+
+#profile-email {
+  font-family: 'futura';
+}
