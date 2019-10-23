@@ -32,8 +32,8 @@ class CalorieGraph extends Component {
 
     return (
       <div className="hoverable">
-      <ResponsiveContainer height={150} width="95%">
-      <LineChart width={600} height={300} data={this.weeklyCalories()} margin={{ top: 0, right: 0, bottom: 0, left: -12 }}>
+      <ResponsiveContainer height={150} width="96%">
+      <LineChart width={600} height={300} data={this.weeklyCalories().reverse()} margin={{ top: 0, right: 0, bottom: 0, left: -15 }}>
       <Line type="monotone" dataKey="calorieIntake" stroke="#c62828" />
       <CartesianGrid stroke="#a5d6a7" strokeDasharray="5 5" />
       <XAxis dataKey="name" />
