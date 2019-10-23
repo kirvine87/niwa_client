@@ -8,7 +8,9 @@ const ArchiveContainer = (props) => {
   }
 
   return (
+    <div><h3>Archive</h3>
     <JournalArchive week={props.week}/>
+    </div>
   )
 }
 
