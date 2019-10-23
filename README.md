@@ -30,12 +30,9 @@ Saves info for each date, for sorting and filtering.
 
 *MVP Features*:
 
-- “[Morning pages](https://www.theguardian.com/lifeandstyle/2014/oct/03/morning-pages-change-your-life-oliver-burkeman)” - 750 words
+- “[Morning pages](https://www.theguardian.com/lifeandstyle/2014/oct/03/morning-pages-change-your-life-oliver-burkeman)” - journal for 500 words each day
 - Nightly reflection - your three wins for the day
-- Track your weight, calories, and other achievements
- - Did you drink enough water?
- - Did you meditate?
- - Did you exercise?
+- Track your calories, moods, and achievements for the day, like: Did you drink enough water? Did you meditate? Did you exercise?
 - View mood data - graphs
 - Tells you how many days you’ve done it in a row in order to motivate you
 - Meditation timer
