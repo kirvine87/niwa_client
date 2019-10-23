@@ -1,4 +1,4 @@
-<a href="public/assets/niwa_logo_master.png" width=300>
+<img src="public/assets/niwa_logo_master.png" width=300 />
 
 # Welcome to Niwa!
 
