@@ -21,8 +21,9 @@ const HealthContainer = (props) => {
 
   return (
     <div>
+    <div className="container">
     <h3>Health</h3>
-    <WaterIntake onSubmit={props.onSubmit} onMoodSubmit={props.onMoodSubmit} today={props.today}/>
+    <WaterIntake onSubmit={props.onSubmit} onMoodSubmit={props.onMoodSubmit} today={props.today}/></div>
     <AddCalorie onSubmit={props.onSubmit} day={props.today}/>
     <AddMood onSubmit={props.onMoodSubmit} day={props.today}/>
     <Activities onSubmit={props.onSubmit} day={props.today} />
