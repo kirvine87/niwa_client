@@ -1,0 +1,59 @@
+html, body {
+  height: 100%
+}
+
+
+body {
+  background-image: url("/assets/tree_transparent.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.blind-tree {
+  height: 100%;
+  width: 100%;
+  filter: blur(5px);
+}
+
+.niwa-bottom {
+  position: fixed;
+  width: 95%;
+  left: 8px;
+  bottom: 60px;
+}
+
+
+#circle {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 40px;
+  height: 200px;
+  width: 200px;
+  margin: 25%;
+}
+
+.niwa-header {
+ font-size: 40px;
+ font-family: 'flama', 'gill sans';
+ font-weight: lighter;
+}
+
+#textarea1 {
+  height: 28em;
+}
+
+#textarea2 {
+  height: 8em;
+}
+
+#profile-name {
+  font-family: 'futura';
+  font-weight: bold;
+}
+
+#profile-email {
+  font-family: 'futura';
+}
