@@ -35,14 +35,16 @@ body {
   margin: 25%;
 }
 
-#login-container{
-  height: 100vh;
-}
-
 .niwa-header {
  font-size: 40px;
- font-family: 'gill sans';
+ font-family: 'flama', 'gill sans';
  font-weight: lighter;
 }
 
+#textarea1 {
+  height: 28em;
+}
 
+#textarea2 {
+  height: 8em;
+}
