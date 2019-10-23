@@ -55,7 +55,10 @@ handleNewMood(mood, location){
       if (this.isToday(data[1][0].date)) {
         return data[1][0];
       } else {
-        return request.post('api/days', {date: new Date()});
+        return request.post('api/days', {
+          date: new Date(),
+          journalEntry: ""
+        });
       }
     })
     .then(data => this.setState({today: data}))
