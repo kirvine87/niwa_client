@@ -39,6 +39,7 @@ class AddMood extends Component {
 
     return (
       <React.Fragment>
+      <div className="container"><p>How are you feeling now? Save your mood with a tag.</p></div>
       <form onSubmit={this.handleSubmit}>
       <div className="form-check">
           <label>
