@@ -1,7 +1,5 @@
-<img src="public/assets/niwa_logo_master.png" width=300 />
-
 # Welcome to Niwa!
-
+<center><img src="public/assets/niwa_logo_master.png" width=300 /></center>
 Hello! We built a wellbeing app for our final project. We put this together in six days, after learning React for three days. It uses the following packages:
 
 - Materialize CSS
