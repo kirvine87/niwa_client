@@ -55,7 +55,10 @@ handleNewMood(mood, location){
       if (this.isToday(data[1][0].date)) {
         return data[1][0];
       } else {
-        return request.post('api/days', {date: new Date()});
+        return request.post('api/days', {
+          date: new Date(),
+          journalEntry: ""
+        });
       }
     })
     .then(data => this.setState({today: data}))
@@ -69,7 +72,7 @@ handleNewMood(mood, location){
       <React.Fragment>
       <SideNav />
       <Switch>
-        <Route exact path="/" render={(props) => {
+        <Route exact path="/home" render={(props) => {
             return <HomeContainer onSubmit={this.handleDayUpdate} onMoodSubmit={this.handleNewMood} today={this.state.today} week={this.state.week} />
         }} />
         <Route path="/health" render={(props) => {

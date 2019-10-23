@@ -6,7 +6,6 @@ import M from 'materialize-css';
 class SideNav extends Component {
   constructor(props) {
     super(props)
-    this.M = window.M;
   }
   componentDidMount() {
     M.AutoInit();
@@ -14,7 +13,7 @@ class SideNav extends Component {
 
 render() {
   return (
-    <Router> <nav className="green lighten-2"><a href="/" className="niwa-header">niwa</a> <Link to="" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></Link></nav>
+    <Router> <nav id="nav" className="green lighten-2 niwa-header"><a href="/home">Niwa</a> <Link to="" data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></Link></nav>
     <br />
   <ul id="slide-out" className="sidenav">
     <li><div className="user-view">

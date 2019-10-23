@@ -21,7 +21,7 @@ class AddMood extends Component {
       tag: this.state.tag,
       day: url
     }
-    this.props.onSubmit(newMood, "/")
+    this.props.onSubmit(newMood, "/home")
   }
 
   handleRating(event){
