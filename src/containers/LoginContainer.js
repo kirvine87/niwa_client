@@ -23,7 +23,7 @@ render(){
       <form>
     <input type="text" placeholder="Username" name="username" />
     <input type="password" placeholder="Password" name="password" />
-    <button onClick={this.props.onClick} type="submit" className="btn-small mt-2 green lighten-2"><a href="/home">Login</a></button>
+    <button onClick={this.props.onClick} type="submit" className="btn-small mt-2 green lighten-2"><a href="/home" className="white-text">Login</a></button>
       </form>
     </div>
     </div>
